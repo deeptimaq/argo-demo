@@ -3,7 +3,7 @@ kind: Rollout
 metadata:
   name: demo-rollout
 spec:
-  replicas: 2
+  replicas: 3
   selector:
     matchLabels:
       app: demo
@@ -23,4 +23,6 @@ spec:
       - setWeight: 10
       - pause: {duration: 30s}
       - setWeight: 50
+      - pause: {duration: 20s}
+      - setWeight: 60
       - pause: {duration: 20s}
