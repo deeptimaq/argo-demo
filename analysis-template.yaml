@@ -1,0 +1,21 @@
+## This is an Argo Rollout AnalysisTemplate that defines a metric to check the success rate of a sample job. The metric uses a Job provider to execute a simple command that echoes "successfully". The success condition checks if the result is "successful", while the failure condition checks if the result is "failed".
+apiVersion: argoproj.io/v1alpha1
+kind: AnalysisTemplate
+metadata:
+  name: success-rate-check
+spec: 
+metrics:
+- name: sample-job-check
+  successCondition: result == "successful"
+  failureConditon: result == "failed"
+  provider:
+    job:
+      spec:
+        template:
+          spec:
+          restartPolicy: Never
+          containers:
+          - name: test
+            image: busybox
+            command: ["/bin/sh","-c"]
+            args: ["echo successfully"]
