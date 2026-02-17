@@ -28,4 +28,4 @@ spec:
       - pause: {duration: 20s}
       - analysis:
         templates:
-          - templateName: success-rate-check
+        - templateName: success-rate-check
