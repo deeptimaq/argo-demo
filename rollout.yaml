@@ -27,5 +27,5 @@ spec:
       - setWeight: 60
       - pause: {duration: 20s}
       - analysis:
-        templates:
-        - templateName: success-rate-check
+          templates:
+          - templateName: success-rate-check
