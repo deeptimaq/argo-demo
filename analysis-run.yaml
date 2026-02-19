@@ -1,0 +1,7 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AnalysisRun
+metadata:
+  generateName: test-run
+spec:
+  analysisTemplate:
+    name: success-rate-check
