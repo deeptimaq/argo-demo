@@ -3,5 +3,4 @@ kind: AnalysisRun
 metadata:
   name: test-run
 spec:
-  analysisTemplate:
-    name: success-rate-check
+  analysisTemplateName: success-rate-check
