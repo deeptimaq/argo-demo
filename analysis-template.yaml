@@ -18,4 +18,4 @@ spec:
                   - name: test
                     image: busybox
                     command: ["/bin/sh", "-c"]
-                    args: ["echo successful"]
+                    args: ["echo failed"]
